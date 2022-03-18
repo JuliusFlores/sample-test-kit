@@ -18,6 +18,7 @@ const LoginForm = () => {
             Email
         </Text>
         <TextInput onChangeText={(val) => changeusername(val)} placeholder='Email or phone number' style={styles.input}/>
+
         <Text style = {{
             fontFamily: 'poppins-regular',
             fontSize: 18,
@@ -25,7 +26,18 @@ const LoginForm = () => {
         }}>
             Password
         </Text>
+        
         <TextInput onChangeText={(val) => changepassword(val)} placeholder='Password' style={styles.input} secureTextEntry={true}/>
+        
+        <Text style = {{
+            textAlign: 'right',
+            fontFamily: 'poppins-regular',
+            fontSize: 12,
+            color: '#000000'
+        }}>
+            Forgot password?
+        </Text>
+
         <Button
         title="Login"
         color= '#000000'
@@ -45,7 +57,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
         width: 300,
-        margin: 10,
+        marginBottom: 10,
         borderRadius: 10
     },
 });
