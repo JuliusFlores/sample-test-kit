@@ -11,10 +11,12 @@ import { Dimensions, Image, Text, View, StyleSheet, Alert } from 'react-native';
 // import Header from "../components/Header";
 // import Footer from "../components/Footer";
 import RegistrationForm from "../components/RegistrationForm";
+import LiveImage  from "../components/LiveImage";
 
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
+       <LiveImage/>
       <RegistrationForm/> 
     </View>
   );
