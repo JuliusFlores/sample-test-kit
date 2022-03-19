@@ -1,14 +1,22 @@
-import { StyleSheet } from 'react-native';
-
+import React from "react";
+import { setStatusBarBackgroundColor } from 'expo-status-bar';
+import { Dimensions, Image, Text, View, StyleSheet, Alert } from 'react-native';
+import {Input, Button} from 'react-native-elements';
 import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+// import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
+import LottieView from 'lottie-react-native';
+import { color } from "react-native-elements/dist/helpers";
+import LoginForm from "../components/LoginForm";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <Header/>
+      <LoginForm/>
+      <Footer/>
     </View>
   );
 }
@@ -16,16 +24,7 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center'
+  }
 });
